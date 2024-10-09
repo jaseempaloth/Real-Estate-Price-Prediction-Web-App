@@ -6,7 +6,7 @@ This project focuses on building a web application that predicts real estate pri
 The project is broken down into three main steps:
 
 1. **Model Building**:
-   - Use the **Bangalore home prices dataset** from Kaggle.
+   - [Use the **Bangalore home prices dataset** from Kaggle.](https://www.kaggle.com/datasets/rachitchourasia/bangaluru-house-price-data/data)
    - Preprocess the data by cleaning, handling outliers, and performing feature engineering.
    - Build a **linear regression model** using **scikit-learn**.
    - Optimize the model using techniques like **GridSearchCV** and **k-fold cross-validation**.
