@@ -5,18 +5,18 @@ This project focuses on building a web application that predicts real estate pri
 
 The project is broken down into three main steps:
 
-1. **Model Building**:
+1. [**Model Building**:](https://github.com/jaseempaloth/Real-Estate-Price-Prediction-Web-App/tree/main/model)
    - [Use the **Bangalore home prices dataset** from Kaggle.](https://www.kaggle.com/datasets/rachitchourasia/bangaluru-house-price-data/data)
    - Preprocess the data by cleaning, handling outliers, and performing feature engineering.
    - Build a **linear regression model** using **scikit-learn**.
    - Optimize the model using techniques like **GridSearchCV** and **k-fold cross-validation**.
    - Save the trained model for use in the Flask server.
 
-2. **Flask API**:
+2. [**Flask API**:](https://github.com/jaseempaloth/Real-Estate-Price-Prediction-Web-App/tree/main/backend)
    - Develop a **Python Flask server** that loads the trained model and serves predictions based on input features.
    - The API receives house-related features (e.g., area in square feet, number of bedrooms, number of bathrooms) via HTTP requests and returns the predicted price.
 
-3. **Web Interface**:
+3. [**Web Interface**:](https://github.com/jaseempaloth/Real-Estate-Price-Prediction-Web-App/tree/main/frontend)
    - Create a simple web interface using **HTML**, **CSS**, and **JavaScript**.
    - The user can input house features like area, bedrooms, bathrooms, etc.
    - The web page sends a request to the Flask server and displays the predicted price.
@@ -43,6 +43,6 @@ The project is broken down into three main steps:
 - **Hyperparameter Tuning**: Applying GridSearchCV to find the best model parameters.
 
 ### User Interface
-![Screenshot.png](Screenshot.png)
+![ui.png](ui.png)
 
 
