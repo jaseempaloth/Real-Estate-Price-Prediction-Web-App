@@ -1,8 +1,15 @@
+// Function to capitalize the first letter of each word
+function capitalizeLocation(location) {
+    return location.toLowerCase().replace(/\b\w/g, function (char) {
+        return char.toUpperCase();
+    });
+}
+
 function getBathValue() {
   var uiBathrooms = document.getElementsByName("uiBathrooms");
   for(var i in uiBathrooms) {
     if(uiBathrooms[i].checked) {
-        return parseInt(i)+1;
+        return parseInt(i) + 1;
     }
   }
   return -1; // Invalid Value
@@ -12,7 +19,7 @@ function getBHKValue() {
   var uiBHK = document.getElementsByName("uiBHK");
   for(var i in uiBHK) {
     if(uiBHK[i].checked) {
-        return parseInt(i)+1;
+        return parseInt(i) + 1;
     }
   }
   return -1; // Invalid Value
@@ -42,17 +49,17 @@ function onClickedEstimatePrice() {
 }
 
 function onPageLoad() {
-  console.log( "document loaded" );
+  console.log("document loaded");
   var url = "http://127.0.0.1:5000/get_location_names";
   // var url = "/api/get_location_names"; //
-  $.get(url,function(data, status) {
+  $.get(url, function(data, status) {
       console.log("got response for get_location_names request");
       if(data) {
           var locations = data.locations;
           var uiLocations = document.getElementById("uiLocations");
           $('#uiLocations').empty();
           for(var i in locations) {
-              var opt = new Option(locations[i]);
+              var opt = new Option(capitalizeLocation(locations[i])); // Capitalize the location name
               $('#uiLocations').append(opt);
           }
       }
